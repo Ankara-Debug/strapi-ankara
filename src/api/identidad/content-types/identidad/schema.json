@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identidads",
+  "info": {
+    "singularName": "identidad",
+    "pluralName": "identidads",
+    "displayName": "Identidad",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "tienda": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tienda.tienda",
+      "inversedBy": "identidads"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
